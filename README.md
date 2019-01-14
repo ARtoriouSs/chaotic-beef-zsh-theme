@@ -3,6 +3,9 @@
 It's a tiny and beautiful theme for Oh-My-Zsh without something superfluous.
 
 ---------------
+### Demo
+
+![Demo picture](https://github.com/ARtoriouSs/chaotic-beef-zsh-theme/blob/master/demo.png "Demo")
 
 ### Install
 
