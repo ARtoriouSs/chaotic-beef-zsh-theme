@@ -20,3 +20,5 @@ wget -P $ZSH/themes https://raw.githubusercontent.com/ARtoriouSs/chaotic-beef-zs
 ```bash
 ZSH_THEME="chaotic-beef"
 ```
+
+* Don't forget to relogin
