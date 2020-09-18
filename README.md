@@ -1,6 +1,7 @@
 # Chaotic beef
 
-It's a tiny and beautiful theme for Oh-My-Zsh without something superfluous.
+It's a tiny and beautiful theme for Oh-My-Zsh without something superfluous, it'll only show * if index is not empty
+and ≠ if current branch needs to be rebased.
 
 ---------------
 ### Demo
