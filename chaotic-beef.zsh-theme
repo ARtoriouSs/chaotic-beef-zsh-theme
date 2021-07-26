@@ -1,7 +1,16 @@
+# get default branch from .git/safe/default_branch or use master
+default-branch() {
+ if test -f .git/safe/default_branch; then
+   cat .git/safe/default_branch
+ else
+   echo master
+ fi
+}
+
 # check if current branch needs to be rebased
 rebase_info() {
-  local latest_master_commit=$(__git_prompt_git show-ref --heads -s master 2> /dev/null)
-  local latest_common_commit=$(__git_prompt_git merge-base master $(git_current_branch) 2> /dev/null)
+  local latest_master_commit=$(__git_prompt_git show-ref --heads -s $(default-branch) 2> /dev/null)
+  local latest_common_commit=$(__git_prompt_git merge-base $(default-branch) $(git_current_branch) 2> /dev/null)
 
   [ "$latest_master_commit" = "$latest_common_commit" ] && echo "" || echo "≠ "
 }

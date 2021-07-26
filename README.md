@@ -1,7 +1,16 @@
 # Chaotic beef
 
-It's a tiny and beautiful theme for Oh-My-Zsh without something superfluous, it'll only show * if index is not empty
-and ≠ if current branch needs to be rebased.
+It's a tiny and beautiful theme for Oh-My-Zsh without something superfluous, it'll only show * if the git index
+is not empty and ≠ if current branch needs to be rebased on a default branch. The default branch is master by default,
+but you can override it for particular repos by creating `.git/safe/default_branch` file with the branch name in it:
+
+```bash
+mkdir .git/safe/
+touch .git/safe/default_branch
+echo develop > .git/safe/default_branch
+```
+
+You can find more info about `.git/safe` [here](https://thoughtbot.com/blog/git-safe).
 
 ---------------
 ### Demo
